@@ -1,0 +1,11 @@
+<div class="container p-4">
+  <h1>Totale transizioni {{transactions.length}}</h1>
+  <div class="row row-cols-3">
+    <app-box-item 
+      *ngFor="let t of transactions"
+      class="col "
+      [transactin]="t"
+    >
+    </app-box-item>
+  </div>
+</div>

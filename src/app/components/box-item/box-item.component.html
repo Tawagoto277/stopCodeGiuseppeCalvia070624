@@ -1,0 +1,12 @@
+<div class="card m-2">
+  <div class="card-header fw-bold">
+    {{transactin?.business}}
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">{{transactin?.name}}</li>
+    <li class="list-group-item">Account : {{transactin?.account}}</li>
+    <li class="list-group-item">Date : {{transactin?.date | date:'dd/MM/yyyy'}}</li>
+    <li class="list-group-item">Type : {{transactin?.type}}</li>
+    <li class="list-group-item">Amount : {{transactin?.amount | currency:'EUR'}}</li>
+  </ul>
+</div>
