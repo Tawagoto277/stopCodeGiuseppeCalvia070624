@@ -9,5 +9,5 @@ import { ITEM } from '../../models/item';
 export class BoxItemComponent {
 
   @Input()
-  transactin? : ITEM;
+  transaction? : ITEM;
 }
