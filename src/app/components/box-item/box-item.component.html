@@ -1,15 +1,15 @@
 <!-- visto con chatGPT ma abbastanza semplice, ho visto solo questo con chatGPT perche ero curioso -->
- <div *ngIf="transaction">
-   <div class="card m-2" [ngClass]="[transaction.type == 'invoice' ? 'green' : '', transaction.type == 'withdrawal' ? 'gray' : '' ]">
-     <div class="card-header fw-bold">
-       {{transaction.business}}
-     </div>
-     <ul class="list-group list-group-flush">
-       <li class="list-group-item">{{transaction.name}}</li>
-       <li class="list-group-item">Account : {{transaction.account}}</li>
-       <li class="list-group-item">Date : {{transaction.date | date:'dd/MM/yyyy'}}</li>
-       <li class="list-group-item">Type : {{transaction.type}}</li>
-       <li class="list-group-item" [ngClass]="{'yellow': transaction.amount > 700}">Amount : {{transaction.amount | currency:'EUR'}}</li>
-     </ul>
-   </div>
- </div>
+<div *ngIf="transaction">
+  <div class="card m-2" [ngClass]="[transaction.type == 'invoice' ? 'green' : '', transaction.type == 'withdrawal' ? 'gray' : '' ]">
+    <div class="card-header fw-bold">
+      {{transaction.business}}
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">{{transaction.name}}</li>
+      <li class="list-group-item">Account : {{transaction.account}}</li>
+      <li class="list-group-item">Date : {{transaction.date | date:'dd/MM/yyyy'}}</li>
+      <li class="list-group-item">Type : {{transaction.type}}</li>
+      <li class="list-group-item" [ngClass]="{'yellow': transaction.amount > 700}">Amount : {{transaction.amount | currency:'EUR'}}</li>
+    </ul>
+  </div>
+</div>
