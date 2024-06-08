@@ -1,4 +1,5 @@
-<div class="card m-2">
+<!-- visto con chatGPT ma abbastanza semplice, ho visto solo questo con chatGPT perche ero curioso -->
+<div class="card m-2" [ngClass]="[transactin?.type == 'invoice' ? 'green' : '', transactin?.type == 'withdrawal' ? 'gray' : '' ]">
   <div class="card-header fw-bold">
     {{transactin?.business}}
   </div>
